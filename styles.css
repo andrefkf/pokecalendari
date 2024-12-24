@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&family=Lexend:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* Estilo general */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Graduate", serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.pokedex-container {
+    width: 90%;
+    max-width: 800px;
+    background-color: #e63946;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-align: center;
+}
+
+.pokedex-container h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.header button {
+    background-color: #457b9d;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: "Graduate", serif;
+    transition: background-color 0.3s ease;
+}
+
+.header button:hover {
+    background-color: #1d3557;
+}
+
+.calendar {
+    background-color: #fff;
+    color: #333;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.weekdays div {
+    text-align: center;
+    padding: 5px;
+    font-size: 1rem;
+    color: #1d3557;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #8ED1FC;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.day:hover {
+    transform: scale(1.1);
+    background-color: #5bb9db;
+}
+
+.day.busy {
+    background-color: #e63946;
+    color: #fff;
+    position: relative;
+}
+
+.day.busy img {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 55px;
+    height: 55px;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.modal-content form label {
+    display: block;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.modal-content button {
+    background-color: #457b9d;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: "Graduate", serif;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.modal-content button:hover {
+    background-color: #1d3557;
+}
+
+.modal-content #close-modal {
+    background-color: #e63946;
+}
+
+.hidden {
+    display: none;
+}
+
+h4 {
+  font-family: "Graduate", serif;  
+  font-weight: 600;
+  font-size: 15px;
+  color: #444;
+}
+
+#activity {
+    border-radius: 25px;
+    border: 2px solid #555;
+    background-color: transparent;
+    color: #333;
+}
+
+#start-time, #end-time {
+    border-radius: 25px;
+    border: 2px solid #555;
+    background-color: transparent;
+    color: #333;
+}
